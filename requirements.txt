@@ -1,0 +1,26 @@
+numpy>=1.24
+Pillow>=10.0
+torch>=2.1
+torchvision>=0.16
+transformers>=4.57
+huggingface_hub>=0.24
+imageio>=2.34
+
+# External model and benchmark repositories are expected to be installed
+# from their official sources and exposed through environment variables.
+#
+# OpenPI + LIBERO:
+# - BAS_OPENPI_ROOT
+# - BAS_LIBERO_ROOT
+# - BAS_OPENPI_CHECKPOINT
+# - BAS_LIBERO_SITE_PACKAGES
+# - LIBERO_CONFIG_PATH
+#
+# OpenVLA-OFT + LIBERO:
+# - BAS_OPENVLA_OFT_ROOT
+# - BAS_OPENVLA_OFT_CHECKPOINT
+# - BAS_OPENVLA_OFT_SITE_PACKAGES
+# - BAS_LEROBOT_SITE_PACKAGES
+# - BAS_LIBERO_ROOT
+# - BAS_LIBERO_DATASETS_ROOT
+# - LIBERO_CONFIG_PATH

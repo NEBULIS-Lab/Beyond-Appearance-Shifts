@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="BAS-VLA: Beyond Appearance Shifts">
+  <meta name="description" content="BAS-VLA is a task-semantic action calibration framework for vision-language-action models under task-preserving and semantic-breaking interventions.">
+  <meta name="keywords" content="vision-language-action models, VLA, embodied AI, robot manipulation, semantic calibration, appearance shifts, LIBERO">
+  <meta name="author" content="Shuaijun Liu, Feiyang You, Chengyu Wu, Shuyang Hao, Chenglong Zhang, Jingyao Cai, Xingwei Chen, Ningxin Su">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <link rel="canonical" href="https://nebulis-lab.com/Beyond-Appearance-Shifts/">
+  <meta property="og:url" content="https://nebulis-lab.com/Beyond-Appearance-Shifts/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BAS-VLA">
+  <meta property="og:title" content="Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models">
+  <meta property="og:description" content="A lightweight action-calibration layer over frozen VLA policies that preserves behavior under nuisance shifts and separates behavior under true task-semantic changes.">
+  <meta property="og:image" content="static/images/bas_vla_logo.png">
+  <meta property="og:image:alt" content="BAS-VLA logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models">
+  <meta name="twitter:description" content="Task-semantic action calibration for reliable VLA behavior.">
+  <meta name="twitter:image" content="static/images/bas_vla_logo.png">
+  <meta name="twitter:image:alt" content="BAS-VLA logo">
+
+  <meta name="theme-color" content="#6b1b67">
+  <meta name="msapplication-TileColor" content="#6b1b67">
+
+  <title>BAS-VLA | Project Page</title>
+
+  <link rel="icon" type="image/png" href="static/images/bas_vla_icon.png">
+  <link rel="apple-touch-icon" href="static/images/bas_vla_icon.png">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero bas-hero">
+      <div class="hero-body">
+        <div class="container is-max-widescreen">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <img src="static/images/bas_vla_logo.png" alt="BAS-VLA logo" class="publication-logo">
+              <h1 class="title is-1 publication-title">
+                <span><span class="title-acrostic">B</span>eyond <span class="title-acrostic">A</span>ppearance <span class="title-acrostic">S</span>hifts:</span>
+                <span>Task-Semantic Action Calibration for VLA Models</span>
+              </h1>
+
+              <div class="publication-authors">
+                <div class="author-list">
+                  <span class="author-block">Shuaijun Liu<sup>1</sup></span>
+                  <span class="author-block">Feiyang You<sup>1</sup></span>
+                  <span class="author-block">Chengyu Wu<sup>1</sup></span>
+                  <span class="author-block">Shuyang Hao<sup>1</sup></span>
+                  <span class="author-block">Chenglong Zhang<sup>1</sup></span>
+                  <span class="author-block">Jingyao Cai<sup>2</sup></span>
+                  <span class="author-block">Xingwei Chen<sup>3,4</sup></span>
+                  <span class="author-block">Ningxin Su<sup>1,*</sup></span>
+                </div>
+                <div class="affiliation-list">
+                  <span><sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)</span>
+                  <span><sup>2</sup>National Centre for Computer Animation, Bournemouth University</span>
+                  <span><sup>3</sup>Shanghai Jiao Tong University</span>
+                  <span><sup>4</sup>Eastern Institute of Technology, Ningbo</span>
+                </div>
+                <div class="corresponding-author">
+                  <sup>*</sup>Corresponding author: <a href="mailto:ningxinsu@hkust-gz.edu.cn">ningxinsu@hkust-gz.edu.cn</a>
+                </div>
+              </div>
+
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/paper.pdf" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/NEBULIS-Lab/Beyond-Appearance-Shifts" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#figures" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-images"></i></span>
+                    <span>Figures</span>
+                  </a>
+                </span>
+              </div>
+
+              <p class="project-url">
+                Website: <a href="https://nebulis-lab.com/Beyond-Appearance-Shifts" target="_blank" rel="noopener">nebulis-lab.com/Beyond-Appearance-Shifts</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="abstract">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-five-sixths">
+            <h2 class="title is-3 has-text-left">Abstract</h2>
+            <div class="content">
+              <p class="has-text-justified">
+                Vision-language-action (VLA) models have achieved strong performance in embodied manipulation, but still lack a clear mechanism to balance behavioral stability with task-semantic sensitivity. We identify two complementary failure modes. Under task-preserving changes, where task semantics remain unchanged but scene appearance varies (e.g., style, illumination, clutter, or paraphrasing), policies often exhibit unnecessary action drift. Conversely, under semantic-breaking changes, where key task semantics such as the target object or constraint are altered, policies frequently fail to produce sufficiently distinct behaviors and instead follow the original trajectory. To address this gap, we propose <strong>BAS-VLA</strong>, a task-semantic action calibration framework built on top of a frozen base VLA. BAS-VLA adopts a breaking-centered calibration core as the default path, and introduces a selective evidence-gated preserving auxiliary that activates only when nuisance variation is detected while task semantics remain consistent. On the OpenPI-pi0.5 / LIBERO-Object Milk-Swap benchmark, BAS-VLA maintains high success on clean (98.0%) and semantics-preserving conditions (97.5%), while reducing clean-criterion success to 0.0% under deliberate target-object swaps, demonstrating strong stale-task suppression and task-semantic separation. On validated style-preserving shifts, it improves success from 42% to 70% without degrading clean performance. These results highlight that reliable VLA behavior requires moving beyond appearance robustness toward explicit task-semantic action calibration.
+              </p>
+              <div class="key-grid">
+                <div class="key-card">
+                  <span class="key-label">Clean</span>
+                  <strong>98.0%</strong>
+                  <span>success on Milk-Swap clean episodes</span>
+                </div>
+                <div class="key-card">
+                  <span class="key-label">Control</span>
+                  <strong>97.5%</strong>
+                  <span>success under preserving controls</span>
+                </div>
+                <div class="key-card">
+                  <span class="key-label">Break</span>
+                  <strong>0.0%</strong>
+                  <span>stale clean-task success under target swap</span>
+                </div>
+                <div class="key-card">
+                  <span class="key-label">Style Shift</span>
+                  <strong>+28.0 pts</strong>
+                  <span>validated preserving-side gain</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-11">
+            <div class="columns is-vcentered overview-layout">
+              <div class="column is-7">
+                <figure class="image paper-figure figure-overview">
+                  <img class="paper-media overview-media" src="static/images/paper/bas_overview.png" alt="BAS-VLA overview from the paper" loading="lazy">
+                </figure>
+              </div>
+              <div class="column is-5">
+                <h2 class="title is-3 has-text-left">Overview</h2>
+                <div class="content">
+                  <p class="has-text-justified">
+                    BAS-VLA frames reliability as an action-level calibration problem. Task-preserving interventions should remain in the same action basin, while semantic-breaking interventions should push the policy away from the stale clean trajectory.
+                  </p>
+                  <ul class="has-text-left">
+                    <li><strong>Task-preserving changes:</strong> style, illumination, clutter, viewpoint, or wording changes that keep task semantics fixed.</li>
+                    <li><strong>Semantic-breaking changes:</strong> edits to target objects or constraints that require a different behavior.</li>
+                    <li><strong>Frozen carrier:</strong> the base VLA remains fixed; BAS-VLA attaches a lightweight calibration layer at the action output.</li>
+                  </ul>
+                </div>
+                <p class="hf-caption caption-text">Figure 1. BAS-VLA overview. Part (A) summarizes the two intervention types studied in this work: task-preserving changes and semantic-breaking changes. Part (B) shows BAS-VLA as an action-calibration layer over a frozen base VLA. Part (C) illustrates the task-aware visual filtering probe, from RGB input to text-conditioned grounding, SAM 2 mask refinement, merged task-relevant masks, and the resulting probe image.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="motivation">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-five-sixths">
+            <h2 class="title is-3 has-text-left">Motivation</h2>
+            <div class="content">
+              <p class="has-text-justified">
+                Strong VLA backbones can still fail in opposite ways. Under appearance-only changes, they may drift from an otherwise correct behavior. Under true semantic changes, they may keep executing the original task. BAS-VLA separates these cases by making the calibration target explicit at the action level.
+              </p>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-10">
+                <figure class="image paper-figure figure-wide">
+                  <img class="paper-media wide-media" src="static/images/paper/motivation_triptych.png" alt="Task-preserving motivation triptych" loading="lazy">
+                </figure>
+                <p class="hf-caption caption-wide">Figure 2. Task-preserving motivation on a single Black-Bowl-to-Plate instruction. The three panels show a clean success, a failure under a darkened illumination shift, and a failure under a semantics-preserving noise perturbation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-five-sixths">
+            <h2 class="title is-3 has-text-left">Method</h2>
+            <div class="columns">
+              <div class="column is-6">
+                <div class="method-panel">
+                  <h3 class="title is-5">Breaking-Centered Core</h3>
+                  <p>
+                    The default BAS-VLA path adds a small residual calibrator to the frozen base action. Matched clean, preserving-control, and semantic-break triplets train the residual to keep clean/control actions close while pushing breaking edits outside the clean action basin.
+                  </p>
+                </div>
+              </div>
+              <div class="column is-6">
+                <div class="method-panel">
+                  <h3 class="title is-5">Evidence-Gated Preserving Auxiliary</h3>
+                  <p>
+                    The preserving auxiliary is intentionally selective. It activates only when early rollout phase, frozen visual-feature discrepancy, semantic consistency, and action disagreement jointly indicate nuisance-induced drift rather than a true task change.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <figure class="image paper-figure figure-wide">
+              <img class="paper-media wide-media" src="static/images/paper/preserving_example.png" alt="Evidence-gated preserving example" loading="lazy">
+            </figure>
+            <p class="hf-caption caption-wide">Figure 3. Dark-scene preserving example. The frozen carrier misreads the target under illumination change; the evidence-gated probe path activates and produces a corrected action.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="results">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-11">
+            <h2 class="title is-3 has-text-left">Results</h2>
+            <div class="content">
+              <p class="has-text-justified">The tables below reproduce the corresponding paper tables in full rather than using shortened web summaries.</p>
+            </div>
+
+            <div class="paper-table">
+              <table class="table is-fullwidth metric-table">
+                <caption>Table 1. Motivation evidence for reliability gaps before BAS-VLA. Original denotes native carrier performance on the unmodified task condition, and Perturbed denotes performance under the corresponding preserving or task-changed intervention.</caption>
+                <thead>
+                  <tr><th>Carrier</th><th>Suite</th><th>Perturbation</th><th>Original success ↑</th><th>Perturbed success ↑</th><th>Δ (pts)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>OpenVLA-OFT</td><td>LIBERO-Spatial</td><td>Perimeter clutter</td><td>98/100 (98.0%)</td><td>65/100 (65.0%)</td><td>-33.0</td></tr>
+                  <tr><td>OpenVLA-OFT</td><td>LIBERO-Spatial</td><td>Margin noise</td><td>97/100 (97.0%)</td><td>51/100 (51.0%)</td><td>-46.0</td></tr>
+                  <tr><td>OpenPI-pi0.5</td><td>LIBERO-Object</td><td>Illum. change</td><td>98/100 (98.0%)</td><td>89/100 (89.0%)</td><td>-9.0</td></tr>
+                  <tr><td>OpenPI-pi0.5</td><td>LIBERO-Object</td><td>Target-object Swap</td><td>197/200 (98.5%)</td><td>68/200 (34.0%)</td><td>-64.5</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="paper-table">
+              <table class="table is-fullwidth metric-table">
+                <caption>Table 3. Main task-preserving style-shift results on the Bowl-on-Ramekin style-shift setting. Each method uses 200 episodes over four seeds; Δstyle is measured relative to the baseline style-shift row.</caption>
+                <thead>
+                  <tr><th>Method</th><th>Clean success ↑</th><th>Matched-clean subset success ↑</th><th>Style-shift success ↑</th><th>Δstyle ↑</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Baseline</td><td>194/200 (97.0%)</td><td>108/200 (54.0%)</td><td>84/200 (42.0%)</td><td>-</td></tr>
+                  <tr class="highlight-row"><td><strong>BAS-VLA</strong></td><td>195/200 (97.5%)</td><td>108/200 (54.0%)</td><td>140/200 (70.0%)</td><td>+28.0 pts</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="paper-table">
+              <table class="table is-fullwidth metric-table">
+                <caption>Table 4. Main semantic-breaking results on matched target-object triplets. Each row uses 200 clean, 200 control, and 200 break episodes; lower is better in Break.</caption>
+                <thead>
+                  <tr><th>Task</th><th>Setting</th><th>Clean success ↑</th><th>Control success ↑</th><th>Break (clean) ↓</th><th>Ctrl.-Break gap ↑</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="group-row"><td colspan="6">Canonical harder target-object tasks</td></tr>
+                  <tr class="highlight-row"><td>BBQ-Swap</td><td>BBQ sauce → ketchup</td><td>180/200 (90.0%)</td><td>185/200 (92.5%)</td><td>0/200 (0.0%)</td><td>92.5</td></tr>
+                  <tr class="highlight-row"><td>Ketchup-Swap</td><td>ketchup → tomato sauce</td><td>176/200 (88.0%)</td><td>184/200 (92.0%)</td><td>0/200 (0.0%)</td><td>92.0</td></tr>
+                  <tr class="highlight-row"><td>Milk-Swap</td><td>milk → orange juice</td><td>196/200 (98.0%)</td><td>195/200 (97.5%)</td><td>0/200 (0.0%)</td><td>97.5</td></tr>
+                  <tr><td>Butter-Swap</td><td>butter → cream cheese</td><td>188/200 (94.0%)</td><td>182/200 (91.0%)</td><td>113/200 (56.5%)</td><td>34.5</td></tr>
+                  <tr class="highlight-row"><td>OJ-Swap</td><td>orange juice → milk</td><td>197/200 (98.5%)</td><td>193/200 (96.5%)</td><td>0/200 (0.0%)</td><td>96.5</td></tr>
+                  <tr class="group-row"><td colspan="6">Stronger interference in the orange-juice → milk setting</td></tr>
+                  <tr class="mid-row"><td>OJ-Swap</td><td>Hard noise</td><td>184/200 (92.0%)</td><td>185/200 (92.5%)</td><td>0/200 (0.0%)</td><td>92.5</td></tr>
+                  <tr class="deep-row"><td>OJ-Swap</td><td>Clutter+Noise</td><td>192/200 (96.0%)</td><td>183/200 (91.5%)</td><td>0/200 (0.0%)</td><td>91.5</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="paper-table">
+              <table class="table is-fullwidth metric-table">
+                <caption>Table 5. Matched-carrier external strategy comparison on Milk-Swap. Each strategy uses 200 clean, 200 control, and 200 break episodes; lower is better in Break.</caption>
+                <thead>
+                  <tr><th>Strategy</th><th>Clean success rate ↑</th><th>Control success rate ↑</th><th>Break (clean) ↓</th><th>Ctrl.-Break gap ↑</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row"><td><strong>BAS-VLA</strong></td><td>196/200 (98.0%)</td><td>195/200 (97.5%)</td><td>0/200 (0.0%)</td><td>97.5</td></tr>
+                  <tr><td>SGAC-AC (NeurIPS'25)</td><td>194/200 (97.0%)</td><td>195/200 (97.5%)</td><td>2/200 (1.0%)</td><td>96.5</td></tr>
+                  <tr><td>AAC (CVPR'26)</td><td>196/200 (98.0%)</td><td>195/200 (97.5%)</td><td>2/200 (1.0%)</td><td>96.5</td></tr>
+                  <tr><td>RTC (NeurIPS'25)</td><td>197/200 (98.5%)</td><td>192/200 (96.0%)</td><td>4/200 (2.0%)</td><td>94.0</td></tr>
+                  <tr><td>PCD (ICLR'26)</td><td>176/200 (88.0%)</td><td>179/200 (89.5%)</td><td>6/200 (3.0%)</td><td>86.5</td></tr>
+                  <tr><td>ST4-VLA (ICLR'26)</td><td>189/200 (94.5%)</td><td>190/200 (95.0%)</td><td>45/200 (22.5%)</td><td>72.5</td></tr>
+                  <tr><td>HAMLET (ICLR'26)</td><td>88/200 (44.0%)</td><td>86/200 (43.0%)</td><td>0/200 (0.0%)</td><td>43.0</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="paper-table"><table class="table is-fullwidth metric-table">
+<caption>Table 6. Real-robot changed-task completion. Every case uses 80 trials per method, for 640 changed-condition rollouts in total. T1/T2 include the initial 17 trials per method.</caption>
+<thead><tr><th>Changed-task case</th><th>Frozen SR ↑</th><th>BAS-VLA SR ↑</th><th>Δ (pts)</th><th>n / method</th></tr></thead>
+<tbody>
+<tr><td>T1: block target</td><td>19/80 (23.8%)</td><td>47/80 (58.8%)</td><td>+35.0</td><td>80</td></tr>
+<tr><td>T2: fruit target</td><td>8/80 (10.0%)</td><td>31/80 (38.8%)</td><td>+28.8</td><td>80</td></tr>
+<tr><td>T3: receptacle target</td><td>13/80 (16.3%)</td><td>52/80 (65.0%)</td><td>+48.8</td><td>80</td></tr>
+<tr><td>T4: spatial relation</td><td>11/80 (13.8%)</td><td>36/80 (45.0%)</td><td>+31.3</td><td>80</td></tr>
+<tr><td>Aggregate</td><td>51/320 (15.9%)</td><td>166/320 (51.9%)</td><td>+35.9</td><td>320</td></tr>
+</tbody></table></div>
+<div class="paper-table"><table class="table is-fullwidth metric-table">
+<caption>Table 7. Changed-task outcome decomposition. New, Old, and Other/timeout are mutually exclusive; easy swaps aggregate Milk/OJ/BBQ/Ketchup.</caption>
+<thead><tr><th>Setting / method</th><th>New ↑</th><th>Old ↓</th><th>Other/timeout ↓</th></tr></thead>
+<tbody>
+<tr><td>Easy swaps / Frozen</td><td>18/800 (2.3%)</td><td>712/800 (89.0%)</td><td>70/800 (8.8%)</td></tr>
+<tr><td>Easy swaps / BAS-VLA</td><td>548/800 (68.5%)</td><td>0/800 (0.0%)</td><td>252/800 (31.5%)</td></tr>
+<tr><td>Easy swaps / norm-matched random residual</td><td>12/800 (1.5%)</td><td>708/800 (88.5%)</td><td>80/800 (10.0%)</td></tr>
+<tr><td>Butter → cream cheese / BAS-VLA</td><td>53/200 (26.5%)</td><td>113/200 (56.5%)</td><td>34/200 (17.0%)</td></tr>
+<tr><td>OJ → milk + visual interference / BAS-VLA</td><td>127/200 (63.5%)</td><td>0/200 (0.0%)</td><td>73/200 (36.5%)</td></tr>
+</tbody></table></div>
+<div class="paper-table"><table class="table is-fullwidth metric-table">
+<caption>Table 8. External-protocol success without benchmark-specific tuning. LIBERO-Plus: four categories × ten cases × 120 rollouts per method. LIBERO-PRO: ten cases × 120 rollouts per method.</caption>
+<thead><tr><th>Protocol</th><th>Baseline ↑</th><th>BAS-VLA ↑</th><th>Δ (pts)</th></tr></thead>
+<tbody>
+<tr><td>LIBERO-Plus</td><td>2,632/4,800 (54.8%)</td><td>3,741/4,800 (77.9%)</td><td>+23.1</td></tr>
+<tr><td>LIBERO-PRO</td><td>443/1,200 (36.9%)</td><td>857/1,200 (71.4%)</td><td>+34.5</td></tr>
+</tbody></table></div>
+<details><summary>Initial real-robot clean/control and behavioral diagnostics</summary>
+<div class="paper-table">
+              <table class="table is-fullwidth metric-table">
+                <caption>Table 11. Real-robot semantic-adaptation results on two deployment tasks. Each method-task pair uses 16 clean, 17 control, and 17 break episodes. Here Break reports success on the changed instruction, and the separation score averages old-target suppression and new-target first-commit.</caption>
+                <thead>
+                  <tr><th>Task</th><th>Method</th><th>n (c/ctrl/br)</th><th>Clean</th><th>Control</th><th>Break</th><th>Old-target suppr.</th><th>New-target first-commit</th><th>Sep. score</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="group-row"><td colspan="9">T1: group the specified colored block with its target set</td></tr>
+                  <tr><td>baseline</td><td>Frozen</td><td>16/17/17</td><td>9/16 (56.3%)</td><td>9/17 (52.9%)</td><td>4/17 (23.5%)</td><td>7/17 (41.2%)</td><td>6/17 (35.3%)</td><td>38.2</td></tr>
+                  <tr class="highlight-row"><td><strong>BAS-VLA default</strong></td><td>BAS-VLA</td><td>16/17/17</td><td>10/16 (62.5%)</td><td>10/17 (58.8%)</td><td>7/17 (41.2%)</td><td>12/17 (70.6%)</td><td>11/17 (64.7%)</td><td>67.6</td></tr>
+                  <tr class="group-row"><td colspan="9">T2: place the specified fruit onto the plate</td></tr>
+                  <tr><td>baseline</td><td>Frozen</td><td>16/17/17</td><td>8/16 (50.0%)</td><td>8/17 (47.1%)</td><td>3/17 (17.6%)</td><td>6/17 (35.3%)</td><td>5/17 (29.4%)</td><td>32.4</td></tr>
+                  <tr class="highlight-row"><td><strong>BAS-VLA default</strong></td><td>BAS-VLA</td><td>16/17/17</td><td>9/16 (56.3%)</td><td>9/17 (52.9%)</td><td>6/17 (35.3%)</td><td>11/17 (64.7%)</td><td>10/17 (58.8%)</td><td>61.8</td></tr>
+                </tbody>
+              </table>
+            </div>
+</details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="figures">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-five-sixths">
+            <h2 class="title is-3 has-text-left">Image Gallery</h2>
+            <div class="content">
+              <p class="has-text-justified">
+                The gallery below presents selected figures from the paper.
+              </p>
+            </div>
+
+            <div class="figure-grid">
+              <figure class="gallery-item gallery-wide">
+                <img src="static/images/paper/perturbations.png" alt="Task-preserving and semantic-breaking perturbation taxonomy" loading="lazy">
+                <figcaption>Figure 4. Representative intervention families in simulation and real deployment. Top: simulation. Bottom: real deployment. Columns show no perturbation, illumination change, style shift, noise, clutter, and spatial-relation change.</figcaption>
+              </figure>
+              <figure class="gallery-item gallery-wide">
+                <img src="static/images/paper/tasks.png" alt="Task suite examples from the appendix" loading="lazy">
+                <figcaption>Figure 5. Main simulation task scenes. The grid shows the ten task layouts used in the primary simulation campaigns.</figcaption>
+              </figure>
+              <figure class="gallery-item gallery-wide">
+                <img src="static/images/paper/compareindark.png" alt="Dark-scene comparison figure from the appendix" loading="lazy">
+                <figcaption>Figure 6. Dark-scene preserving comparison. Top: clean success. Middle: illumination-change failure under the frozen baseline. Bottom: the same darkened condition succeeds with BAS-VLA.</figcaption>
+              </figure>
+              <figure class="gallery-item gallery-wide">
+                <img src="static/images/paper/swap_fail.png" alt="Target-swap failure case from the appendix" loading="lazy">
+                <figcaption>Figure 7. Butter-Swap failure sequence. The rollout continues toward the stale clean-task object rather than committing to the swapped target.</figcaption>
+              </figure>
+              <figure class="gallery-item gallery-wide">
+                <img src="static/images/paper/fig_harder_task9_perimeter_right_5x2.png" alt="Perimeter-clutter semantic-breaking example" loading="lazy">
+                <figcaption>Figure 8. Representative OJ-Swap under clutter and noise. The scene adds stronger visual interference, while BAS-VLA still completes the intended swapped-target task.</figcaption>
+              </figure>
+              <figure class="gallery-item gallery-wide composite-figure">
+                <div class="subfigure-row">
+                  <div class="subfigure-panel">
+                    <img src="static/images/paper/process_mean_steps.png" alt="Mean steps" loading="lazy">
+                    <p>Mean steps.</p>
+                  </div>
+                  <div class="subfigure-panel">
+                    <img src="static/images/paper/process_median_steps.png" alt="Median steps" loading="lazy">
+                    <p>Median steps.</p>
+                  </div>
+                  <div class="subfigure-panel">
+                    <img src="static/images/paper/process_saturation.png" alt="190-step saturation" loading="lazy">
+                    <p>190-step saturation.</p>
+                  </div>
+                </div>
+                <figcaption>Figure 9. Process-side view of the two main semantic-breaking tasks. Milk-Swap keeps clean/control short and unsaturated while break saturates; Tomato-Swap shows a weaker version of same pattern.</figcaption>
+              </figure>
+              <figure class="gallery-item gallery-wide composite-figure">
+                <div class="subfigure-row">
+                  <div class="subfigure-panel">
+                    <img src="static/images/paper/family_break_clean.png" alt="Break-clean by family" loading="lazy">
+                    <p>Break-clean by family.</p>
+                  </div>
+                  <div class="subfigure-panel">
+                    <img src="static/images/paper/family_break_expert.png" alt="Break-expert by family" loading="lazy">
+                    <p>Break-expert by family.</p>
+                  </div>
+                  <div class="subfigure-panel">
+                    <img src="static/images/paper/family_control.png" alt="Control invariance by family" loading="lazy">
+                    <p>Control invariance by family.</p>
+                  </div>
+                </div>
+                <figcaption>Figure 10. Family-wise action-distance diagnostics for the offline instruction comparator family.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="citation">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column is-five-sixths">
+            <h2 class="title is-3 has-text-left">Citation</h2>
+            <div class="bibtex-box">
+<pre><code>@misc{liu2026basvla,
+  title     = {Beyond Appearance Shifts: Task-Semantic Action Calibration for VLA Models},
+  author    = {Liu, Shuaijun and You, Feiyang and Wu, Chengyu and Hao, Shuyang and Zhang, Chenglong and Cai, Jingyao and Chen, Xingwei and Su, Ningxin},
+  year      = {2026}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>BAS-VLA project page.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

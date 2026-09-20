@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Precomputed matched action triplets",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": [
+      "case_id",
+      "family",
+      "clean_instruction",
+      "control_instruction",
+      "break_instruction",
+      "split",
+      "clean_base_action",
+      "control_base_action",
+      "break_base_action",
+      "expert_action"
+    ],
+    "properties": {
+      "case_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "family": {
+        "type": "string",
+        "minLength": 1
+      },
+      "clean_instruction": {
+        "type": "string",
+        "minLength": 1
+      },
+      "control_instruction": {
+        "type": "string",
+        "minLength": 1
+      },
+      "break_instruction": {
+        "type": "string",
+        "minLength": 1
+      },
+      "split": {
+        "enum": [
+          "train",
+          "val",
+          "test"
+        ]
+      },
+      "clean_base_action": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "number"
+        }
+      },
+      "control_base_action": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "number"
+        }
+      },
+      "break_base_action": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "number"
+        }
+      },
+      "expert_action": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "number"
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

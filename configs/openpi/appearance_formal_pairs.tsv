@@ -1,0 +1,5 @@
+# gpu	task_id	instruction	shift_preset	pair_prefix	seeds
+4	4	pick up the ketchup and place it in the basket	bg_dark_dim	appearance_task4_bg_dark_dim	7,11,19,23
+5	5	pick up the tomato sauce and place it in the basket	bg_dark_dim	appearance_task5_bg_dark_dim	7,11,19,23
+6	6	pick up the butter and place it in the basket	bg_dark_dim	appearance_task6_bg_dark_dim	7,11,19,23
+7	9	pick up the orange juice and place it in the basket	style_swap	appearance_task9_style_swap	7,11,19,23

@@ -1,0 +1,5 @@
+# gpu	task_id	clean_instruction	control_instruction	break_instruction	pair_prefix	seeds
+4	3	pick up the bbq sauce and place it in the basket	pick up the bbq sauce and put it in the basket	pick up the ketchup and place it in the basket	formal_task3_similar_bottle	7,11,19,23
+5	4	pick up the ketchup and place it in the basket	pick up the ketchup and put it in the basket	pick up the tomato sauce and place it in the basket	formal_task4_similar_condiment	7,11,19,23
+6	6	pick up the butter and place it in the basket	pick up the butter and put it in the basket	pick up the cream cheese and place it in the basket	formal_task6_spread_confusion	7,11,19,23
+7	9	pick up the orange juice and place it in the basket	pick up the orange juice and put it in the basket	pick up the milk and place it in the basket	formal_task9_carton_confusion	7,11,19,23

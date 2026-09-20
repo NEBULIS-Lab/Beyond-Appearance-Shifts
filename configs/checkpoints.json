@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "artifacts_bundled": false,
+  "entries": [
+    {
+      "id": "breaking_adapter",
+      "status": "required_input",
+      "required_files": [
+        "residual_adapter.pt",
+        "adapter_metadata.json",
+        "vocab.json",
+        "results.json"
+      ],
+      "required_metadata": [
+        "carrier",
+        "input_dim",
+        "hidden_dim",
+        "output_dim",
+        "delta_scale",
+        "vocab_size",
+        "feature_type",
+        "feature_normalization",
+        "action_space",
+        "action_layout",
+        "action_normalization",
+        "objective_config",
+        "seed"
+      ],
+      "required_provenance": [
+        "training_record_manifest_and_split_ids",
+        "carrier_checkpoint_revision",
+        "configuration",
+        "artifact_sha256"
+      ],
+      "download_url": null
+    }
+  ],
+  "evaluated_artifacts": {
+    "status": "required_input",
+    "required_inputs": [
+      "exact evaluated adapter weights and metadata",
+      "evaluated instruction-margin and semantic-margin comparator recipes/checkpoints",
+      "fixed carrier feature layers and normalization identifiers"
+    ]
+  }
+}

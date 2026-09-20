@@ -1,0 +1,16 @@
+{
+  "protocol": "matched_carrier_milk_swap",
+  "carrier": "OpenPI pi0.5 LIBERO",
+  "seeds": [7, 11, 19, 23],
+  "episodes_per_seed_condition": 50,
+  "conditions": ["clean", "control", "break"],
+  "metric": "original_goal_success",
+  "methods": ["BAS-VLA", "SGAC-AC", "AAC", "RTC", "PCD", "ST4-VLA", "HAMLET"],
+  "instructions": {
+    "clean": "pick up the milk and place it in the basket",
+    "control": "pick up the milk and put it in the basket",
+    "break": "pick up the orange juice and place it in the basket"
+  },
+  "required_manifest_fields": ["carrier revision and checkpoint SHA256", "normalization identifier", "method implementation revision/license/command", "initial-state artifact SHA256 and IDs"],
+  "implementation_note": "Budget and task protocol only. Third-party implementations and their evaluated revision identifiers are not bundled."
+}

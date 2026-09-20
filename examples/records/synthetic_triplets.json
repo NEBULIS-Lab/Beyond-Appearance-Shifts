@@ -1,0 +1,100 @@
+[
+  {
+    "record_id": "synthetic-0",
+    "case_id": "synthetic_object_swap",
+    "family": "target_object",
+    "split": "train",
+    "clean_instruction": "pick up the red block",
+    "control_instruction": "grasp the red block",
+    "break_instruction": "pick up the blue block",
+    "clean_base_action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "control_base_action": [
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01
+    ],
+    "break_base_action": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "expert_action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "synthetic": true,
+    "action_space": "synthetic_7d",
+    "action_normalization": "identity",
+    "source_state_id": "synthetic-state-0"
+  },
+  {
+    "record_id": "synthetic-1",
+    "case_id": "synthetic_object_swap",
+    "family": "target_object",
+    "split": "val",
+    "clean_instruction": "pick up the red block",
+    "control_instruction": "grasp the red block",
+    "break_instruction": "pick up the blue block",
+    "clean_base_action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "control_base_action": [
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01
+    ],
+    "break_base_action": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "expert_action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "synthetic": true,
+    "action_space": "synthetic_7d",
+    "action_normalization": "identity",
+    "source_state_id": "synthetic-state-1"
+  }
+]

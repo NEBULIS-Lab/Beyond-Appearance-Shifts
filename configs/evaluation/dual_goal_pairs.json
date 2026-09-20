@@ -1,0 +1,60 @@
+{
+  "suite": "libero_object",
+  "protocol": "dual_goal_first_hit",
+  "goal_predicate": "In(<object>_1, basket_1_contain_region)",
+  "pairs": [
+    {
+      "pair_id": "bbq_to_ketchup",
+      "task_id": 3,
+      "old_object": "bbq_sauce",
+      "new_object": "ketchup",
+      "old_instruction": "pick up the bbq sauce and place it in the basket",
+      "new_instruction": "pick up the ketchup and place it in the basket",
+      "scene_protocol": "native_scene",
+      "bddl_override": null
+    },
+    {
+      "pair_id": "ketchup_to_tomato",
+      "task_id": 4,
+      "old_object": "ketchup",
+      "new_object": "tomato_sauce",
+      "old_instruction": "pick up the ketchup and place it in the basket",
+      "new_instruction": "pick up the tomato sauce and place it in the basket",
+      "scene_protocol": "co_present_correction",
+      "bddl_override": "../../bddl/pick_up_the_ketchup_and_place_it_in_the_basket__with_tomato_sauce.bddl",
+      "protocol_note": "The stock task-4 BDDL does not contain tomato_sauce; one distractor is replaced while the old target, basket, regions, and old-task goal are preserved."
+    },
+    {
+      "pair_id": "butter_to_cream_cheese",
+      "task_id": 6,
+      "old_object": "butter",
+      "new_object": "cream_cheese",
+      "old_instruction": "pick up the butter and place it in the basket",
+      "new_instruction": "pick up the cream cheese and place it in the basket",
+      "scene_protocol": "co_present_correction",
+      "bddl_override": "../../bddl/pick_up_the_butter_and_place_it_in_the_basket__with_cream_cheese.bddl",
+      "protocol_note": "The stock task-6 BDDL does not contain cream_cheese; one distractor is replaced while the old target, basket, regions, and old-task goal are preserved."
+    },
+    {
+      "pair_id": "milk_to_orange_juice",
+      "task_id": 7,
+      "old_object": "milk",
+      "new_object": "orange_juice",
+      "old_instruction": "pick up the milk and place it in the basket",
+      "new_instruction": "pick up the orange juice and place it in the basket",
+      "scene_protocol": "native_scene",
+      "bddl_override": null
+    },
+    {
+      "pair_id": "orange_juice_to_milk",
+      "task_id": 9,
+      "old_object": "orange_juice",
+      "new_object": "milk",
+      "old_instruction": "pick up the orange juice and place it in the basket",
+      "new_instruction": "pick up the milk and place it in the basket",
+      "scene_protocol": "co_present_correction",
+      "bddl_override": "../../bddl/pick_up_the_orange_juice_and_place_it_in_the_basket__with_milk.bddl",
+      "protocol_note": "The stock task-9 BDDL does not contain milk; one distractor is replaced while the old target, basket, regions, and old-task goal are preserved."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+*.swo
+.env
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+runs/
+outputs/
+tmp/
+logs/
+reports/release_status.md
