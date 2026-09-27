@@ -1,0 +1,14 @@
+{
+  "protocol": "paper_real_robot_cases",
+  "hardware": {"robot": "Songling PiPER, single arm", "control": "piper_sdk over CAN", "cameras": "two Orbbec RGB-D inputs and one record-only overview", "model_modality": "RGB only", "camera_sdk": "OrbbecSDK v1"},
+  "methods": ["frozen", "core"],
+  "changed_trials_per_method_case": 80,
+  "cases": [
+    {"case_id": "T1", "change": "block target", "task": "group the specified colored block with its target set"},
+    {"case_id": "T2", "change": "fruit target", "task": "place the specified fruit onto the plate"},
+    {"case_id": "T3", "change": "receptacle target"},
+    {"case_id": "T4", "change": "spatial relation"}
+  ],
+  "original_subset": {"cases": ["T1", "T2"], "per_method_case": {"clean": 16, "control": 17, "break": 17}, "break_trials_already_included_in_80": true},
+  "required_local_assets": ["carrier and adapter checkpoints", "exact instructions and object layouts", "camera serial numbers and calibration", "state/action decoder and coordinate-frame calibration", "PiPER/Orbbec acquisition and control backend"]
+}

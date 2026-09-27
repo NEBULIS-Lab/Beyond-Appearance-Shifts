@@ -1,0 +1,61 @@
+{
+  "status": "requires_artifacts",
+  "table": "Task-preserving Bowl-on-Ramekin",
+  "carrier": "openvla_oft",
+  "suite": "libero_spatial",
+  "task_language": "pick up the black bowl on the ramekin and place it on the plate",
+  "conditions": [
+    "clean",
+    "matched_clean",
+    "style_shift"
+  ],
+  "methods": [
+    "frozen",
+    "pres"
+  ],
+  "budget": {
+    "seeds": 4,
+    "episodes_per_seed": 50,
+    "episodes_per_method_condition": 200
+  },
+  "style_family": {
+    "floor_style": "rustic",
+    "wall_style": "dark-blue"
+  },
+  "required_artifacts": [
+    "exact four seed IDs",
+    "task ID mapping at benchmark revision",
+    "checkpoint and normalization metadata",
+    "style transform implementation and texture assets",
+    "matched-clean episode identities and subset selection rule",
+    "preserving probe/gate configuration and frozen feature layer metadata"
+  ],
+  "matching_rule": "Use the identical seed, initial state, and case identities for both methods and for matched-clean/style conditions; report the clean and matched-clean columns separately.",
+  "case_matrix": [
+    {
+      "method": "frozen",
+      "condition": "clean"
+    },
+    {
+      "method": "frozen",
+      "condition": "matched_clean"
+    },
+    {
+      "method": "frozen",
+      "condition": "style_shift"
+    },
+    {
+      "method": "pres",
+      "condition": "clean"
+    },
+    {
+      "method": "pres",
+      "condition": "matched_clean"
+    },
+    {
+      "method": "pres",
+      "condition": "style_shift"
+    }
+  ],
+  "note": "Configure the trial identities and preserving settings for the condition/method matrix."
+}

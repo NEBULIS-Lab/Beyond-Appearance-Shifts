@@ -1,0 +1,30 @@
+{
+  "protocol": "fixed_full_gate_2x2",
+  "policy_mode": "full",
+  "condition_inputs_to_policy": false,
+  "conditions": [
+    {
+      "semantic_change": false,
+      "visual_shift": false
+    },
+    {
+      "semantic_change": false,
+      "visual_shift": true
+    },
+    {
+      "semantic_change": true,
+      "visual_shift": false
+    },
+    {
+      "semantic_change": true,
+      "visual_shift": true
+    }
+  ],
+  "reference_target": "probe action closer than base action to the expert/reference action",
+  "oracle_routing": "separate diagnostic only; do not mix into fixed Full results",
+  "required_artifacts": [
+    "matched trials",
+    "expert/reference actions",
+    "exact checkpoint and fixed gate configuration"
+  ]
+}

@@ -1,0 +1,7 @@
+# gpu	task_id	instruction_tag	instruction	pair_prefix	seeds
+1	7	clean	pick up the milk and place it in the basket	openpi_task7_clean	7,11,19,23
+2	7	control	pick up the milk and put it in the basket	openpi_task7_control	7,11,19,23
+3	7	break	pick up the orange juice and place it in the basket	openpi_task7_break	7,11,19,23
+4	5	clean	pick up the tomato sauce and place it in the basket	openpi_task5_clean	7,11,19,23
+5	5	control	pick up the tomato sauce and put it in the basket	openpi_task5_control	7,11,19,23
+6	5	break	pick up the cream cheese and place it in the basket	openpi_task5_break	7,11,19,23

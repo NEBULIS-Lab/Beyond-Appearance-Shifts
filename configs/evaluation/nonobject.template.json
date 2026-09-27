@@ -1,0 +1,48 @@
+{
+  "schema_version": "bas_vla_evaluation_v1",
+  "status": "requires_artifacts",
+  "protocol": "nonobject",
+  "benchmark_revision": "REQUIRED immutable benchmark revision",
+  "selection_id": "REQUIRED exact evaluated selection identifier",
+  "environment_factory": "bas_vla.evaluation.openpi:create_env",
+  "carrier": {
+    "name": "REQUIRED carrier name",
+    "checkpoint_id": "REQUIRED checkpoint artifact identifier",
+    "config_name": "REQUIRED carrier config",
+    "normalization_key": "REQUIRED checkpoint normalization key",
+    "checkpoint_files": {}
+  },
+  "cases": [],
+  "required_case_fields": [
+    "case_id",
+    "category",
+    "instruction",
+    "bddl_file",
+    "bddl_file_sha256",
+    "init_states_file",
+    "init_states_file_sha256",
+    "normalization_key",
+    "trials",
+    "old_goal",
+    "new_goal"
+  ],
+  "trial_schema": {
+    "seed": "integer",
+    "episode_idx": "integer"
+  },
+  "asset_paths": "Relative to --asset-root; immutable source files with SHA-256 digests.",
+  "selection_note": "Configure the exact case selection and trial identities for the evaluation.",
+  "paper_budget": {
+    "families": {
+      "destination": 2,
+      "spatial_relation": 2,
+      "order": 2
+    },
+    "seeds": 4,
+    "rollouts_per_seed_per_case": 50
+  },
+  "goal_schema": {
+    "kind": "all or ordered",
+    "predicates": "List of LIBERO predicate argument lists. Order tasks require ordered."
+  }
+}

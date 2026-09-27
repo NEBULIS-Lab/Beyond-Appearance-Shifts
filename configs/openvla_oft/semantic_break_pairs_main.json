@@ -1,0 +1,38 @@
+{
+  "description": "Main semantic-break pairs intended for public OpenVLA-OFT + LIBERO integration.",
+  "pairs": [
+    {
+      "pair_id": "break_target_object",
+      "family": "target_object",
+      "suite": "libero_10",
+      "task_id": 0,
+      "clean_instruction": "put both the alphabet soup and the tomato sauce in the basket",
+      "control_instruction": "put the alphabet soup and the tomato sauce into the basket",
+      "break_instruction": "put both the alphabet soup and the butter in the basket",
+      "changed_semantics": "target object tomato sauce -> butter",
+      "notes": "Main breaking family."
+    },
+    {
+      "pair_id": "break_order_constraint",
+      "family": "order_constraint",
+      "suite": "libero_10",
+      "task_id": 9,
+      "clean_instruction": "put the yellow and white mug in the microwave and close it",
+      "control_instruction": "place the yellow and white mug in the microwave and close it",
+      "break_instruction": "close the microwave and put the yellow and white mug in it",
+      "changed_semantics": "execution order swapped",
+      "notes": "Boundary-sensitive family."
+    },
+    {
+      "pair_id": "break_executability_condition",
+      "family": "executability_condition",
+      "suite": "libero_10",
+      "task_id": 2,
+      "clean_instruction": "turn on the stove and put the moka pot on it",
+      "control_instruction": "switch on the stove and put the moka pot on it",
+      "break_instruction": "turn off the stove and put the moka pot on it",
+      "changed_semantics": "turn on -> turn off",
+      "notes": "Main breaking family."
+    }
+  ]
+}
